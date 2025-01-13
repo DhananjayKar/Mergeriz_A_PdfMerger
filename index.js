@@ -4,6 +4,7 @@ const app = express()
 const multer  = require('multer')
 const {mergePdfs} = require('./merger')
 const upload = multer({ dest: 'uploads/' })
+const port = process.env.PORT || 3000;
 
 app.use('/static', express.static('public'))
 
@@ -37,6 +38,6 @@ app.post('/merge', upload.array('pdfiles'), async (req, res, next) => {
   }
 });
 
-app.listen(3000, ()=>{
-  console.log(`The site is live on http://localhost:3000`);
+app.listen(port, ()=>{
+  console.log(`The site is live on http://localhost:${port}`);
 })
