@@ -1,0 +1,16 @@
+[build]
+  command = "node index.js"  # Your build command
+  publish = "inind.js"           # The directory to publish (adjust based on your build output)
+
+[dev]
+  command = "node index.js"  # Command for local development
+  port = 3000            # Port for local development server
+
+[[redirects]]
+  from = "/old-url/*"
+  to = "/new-url/:splat"
+  status = 301
+  force = true
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
