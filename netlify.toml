@@ -1,6 +1,6 @@
 [build]
-  command = "node index.js"  # Your build command
-  publish = "index.js"           # The directory to publish (adjust based on your build output)
+  command = "npm install"  # Your build command
+  publish = ""           # The directory to publish (adjust based on your build output)
 
 [dev]
   command = "node index.js"  # Command for local development
