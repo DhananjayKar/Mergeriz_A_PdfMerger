@@ -1,6 +1,6 @@
 [build]
   command = "npm install"  # Your build command
-  publish = "templates/index.html"           # The directory to publish (adjust based on your build output)
+  publish = "templates"           # The directory to publish (adjust based on your build output)
 
 [dev]
   command = "node index.js"  # Command for local development
